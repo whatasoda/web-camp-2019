@@ -29,7 +29,7 @@ const ogp = async (data: [string, string, string]) => {
   });
   
   const result = await Promise.all(promises);
-  const outPath = path.resolve(__dirname, `../gulp/data-${data[2]}.json`);
+  const outPath = path.resolve(__dirname, `../gulp-sample/data-${data[2]}.json`);
   writeFile(outPath, JSON.stringify(result.filter(Boolean), null, '  '));
 };
 
