@@ -1,0 +1,69 @@
+extends _template
+
+block var
+  -
+    discographies = [
+      {
+        "title": "Roselia 2017-2018 LIVE BEST -Soweit- | BanG Dream!（バンドリ！）公式サイト",
+        "type": "article",
+        "url": "https://bang-dream.com/discographies/1245",
+        "image": "https://s3-ap-northeast-1.amazonaws.com/bang-dream-portal/5280a8d5-2ece-4211-9fdc-b05ea14d4d65.png",
+        "site_name": "BanG Dream!（バンドリ！）公式サイト",
+        "description": "Roselia 2017-2018 LIVE BEST -Soweit-のご案内。"
+      },
+      {
+        "title": "「BanG Dream! FILM LIVE」劇中歌コレクション | BanG Dream!（バンドリ！）公式サイト",
+        "type": "article",
+        "url": "https://bang-dream.com/discographies/1200",
+        "image": "https://s3-ap-northeast-1.amazonaws.com/bang-dream-portal/fc7d7408-de92-478f-8b23-dd37bbf30d49.jpg",
+        "site_name": "BanG Dream!（バンドリ！）公式サイト",
+        "description": "「BanG Dream! FILM LIVE」劇中歌コレクションのご案内。"
+      },
+      {
+        "title": "「NO GIRL NO CRY」 | BanG Dream!（バンドリ！）公式サイト",
+        "type": "article",
+        "url": "https://bang-dream.com/discographies/1142",
+        "image": "https://s3-ap-northeast-1.amazonaws.com/bang-dream-portal/74ce6f2f-e3b1-4398-8f24-b7326d8d2e7c.jpg",
+        "site_name": "BanG Dream!（バンドリ！）公式サイト",
+        "description": "「NO GIRL NO CRY」のご案内。"
+      },
+      {
+        "title": "5th Single「ON YOUR MARK」 | BanG Dream!（バンドリ！）公式サイト",
+        "type": "article",
+        "url": "https://bang-dream.com/discographies/966",
+        "image": "https://s3-ap-northeast-1.amazonaws.com/bang-dream-portal/fcb53a34-f39b-4924-9678-ee23b04f4b61.jpg",
+        "site_name": "BanG Dream!（バンドリ！）公式サイト",
+        "description": "5th Single「ON YOUR MARK」のご案内。"
+      },
+      {
+        "title": "5th Single「きゅ～まい＊flower」 | BanG Dream!（バンドリ！）公式サイト",
+        "type": "article",
+        "url": "https://bang-dream.com/discographies/965",
+        "image": "https://s3-ap-northeast-1.amazonaws.com/bang-dream-portal/6b00aa2f-7e16-4858-86d7-d20ecb298901.jpg",
+        "site_name": "BanG Dream!（バンドリ！）公式サイト",
+        "description": "5th Single「きゅ～まい＊flower」のご案内。"
+      },
+    ];
+  -
+
+block meta
+  link(rel="stylesheet", href="../scss/style.scss")
+  title バンドリが好きすぎる……
+
+block body
+  header.header__block
+    h1.header__title バンドリが好きすぎる……
+  main
+    .discography__block
+      ul.discography__list
+        each item in discographies
+          li.discography__item
+            a.discography__anchor(href=item.url)
+              .discography__thumbnail
+                img.discography__image(src=item.image)
+              .discography__label
+                span.discography__text--title #{item.title}
+                br
+                span.discography__text--description #{item.description}
+                br
+                span.discography__text--site-name #{item.site_name}
