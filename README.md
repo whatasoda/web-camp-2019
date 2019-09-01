@@ -24,7 +24,6 @@
 - まとめ
 - 時間があったらやること
   - Node.js の環境構築会
-    - Windows 勢に WSL を入れさせる…
 
 ## 伝えたいこと(学習目標)
 上から順に優先度高
@@ -683,3 +682,28 @@ webpack 使う必要が無いなら無理して使わなくても大丈夫。
 webpack は JavaScript を本気でやっていきたいなら覚えておいて損なし。どこかに属して開発する場合は人が書いた `webpack.config.js` を使って開発することが多いと思うけど、自分で書けたら楽しいので**とりあえずやってみてほしい！**
 
 **とりあえずやってみてほしい！**
+
+## 実演
+やっていき💪
+
+### Node.js 入れるために nodenv 入れるために anyenv 入れる
+[anyenv](https://github.com/anyenv/anyenv#manual-git-checkout)
+```sh
+anyenv install --init
+```
+
+### Node.js 入れるために nodenv 入れる
+```sh
+anyenv install nodenv
+exec $SHELL -l
+nodenv --version
+```
+
+### Node.js 入れる
+[Node.js](https://nodejs.org/en/)
+```sh
+nodenv install --list
+nodenv install 10.16.3
+exec $SHELL -l
+node --version
+```
